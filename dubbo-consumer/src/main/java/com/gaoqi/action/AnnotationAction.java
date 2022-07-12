@@ -5,7 +5,7 @@ import org.apache.dubbo.config.annotation.DubboReference;
 import org.springframework.stereotype.Component;
 
 @Component("annotationAction")
-public class AnnocationAction {
+public class AnnotationAction {
     @DubboReference
     DemoService demoService;
 

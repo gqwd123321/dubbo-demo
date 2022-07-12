@@ -1,4 +1,4 @@
-package com.gaoqi.provider;
+package com.gaoqi.provider.impl;
 
 import com.gaoqi.api.DemoService;
 import org.apache.dubbo.config.annotation.DubboService;
