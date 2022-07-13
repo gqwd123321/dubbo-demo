@@ -1,3 +1,4 @@
+import com.gaoqi.provider.config.ProviderConfiguration;
 import org.apache.dubbo.config.spring.context.annotation.EnableDubbo;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Configuration;
@@ -14,11 +15,11 @@ public class ProviderMain {
         System.in.read(); // 按任意键退出
     }
 
-    @Configuration
-    @EnableDubbo(scanBasePackages = "com.gaoqi.provider.impl")
-    @PropertySource("classpath:/dubbo-provider.properties")
-    static public class ProviderConfiguration {
-
-    }
+//    @Configuration
+//    @EnableDubbo(scanBasePackages = "com.gaoqi.provider.impl")
+//    @PropertySource("classpath:/dubbo-provider.properties")
+//    static public class ProviderConfiguration {
+//
+//    }
 
 }

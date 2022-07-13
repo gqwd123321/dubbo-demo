@@ -1,9 +1,6 @@
 import com.gaoqi.action.AnnotationAction;
-import org.apache.dubbo.config.spring.context.annotation.EnableDubbo;
+import com.gaoqi.config.ConsumerConfiguration;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.PropertySource;
 
 import java.io.IOException;
 import java.util.Scanner;
@@ -20,11 +17,11 @@ public class consumerMain {
         new Scanner(System.in).next();
     }
 
-    @Configuration
-    @EnableDubbo(scanBasePackages = "com.gaoqi.action")
-    @PropertySource("classpath:/dubbo-consumer.properties")
-    @ComponentScan(value = {"com.gaoqi.action"})
-    static public class ConsumerConfiguration {
-
-    }
+//    @Configuration
+//    @EnableDubbo(scanBasePackages = "com.gaoqi.action")
+//    @PropertySource("classpath:/dubbo-consumer.properties")
+//    @ComponentScan(value = {"com.gaoqi.action"})
+//    static public class ConsumerConfiguration {
+//
+//    }
 }
