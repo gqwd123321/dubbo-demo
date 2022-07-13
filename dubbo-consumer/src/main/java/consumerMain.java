@@ -17,11 +17,4 @@ public class consumerMain {
         new Scanner(System.in).next();
     }
 
-//    @Configuration
-//    @EnableDubbo(scanBasePackages = "com.gaoqi.action")
-//    @PropertySource("classpath:/dubbo-consumer.properties")
-//    @ComponentScan(value = {"com.gaoqi.action"})
-//    static public class ConsumerConfiguration {
-//
-//    }
 }
