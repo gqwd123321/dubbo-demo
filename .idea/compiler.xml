@@ -10,6 +10,13 @@
         <module name="dubbo-api" />
         <module name="dubbo-consumer" />
       </profile>
+      <profile name="Annotation profile for Unknown" enabled="true">
+        <sourceOutputDir name="../../target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../../target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="wrapper (2)" />
+        <module name="wrapper (1)" />
+      </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="wrapper (1)" target="1.5" />
