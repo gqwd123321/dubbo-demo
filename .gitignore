@@ -1,1 +1,3 @@
 *.iml
+/dubbo-provider/target/
+/dubbo-consumer/target/
