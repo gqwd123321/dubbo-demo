@@ -1,2 +1,3 @@
+/Users/gqwd/gqresearch/dubbo-demo/dubbo-provider/src/main/java/com/gaoqi/provider/config/ProviderConfiguration.java
 /Users/gqwd/gqresearch/dubbo-demo/dubbo-provider/src/main/java/ProviderMain.java
-/Users/gqwd/gqresearch/dubbo-demo/dubbo-provider/src/main/java/com/gaoqi/provider/DemoServiceImpl.java
+/Users/gqwd/gqresearch/dubbo-demo/dubbo-provider/src/main/java/com/gaoqi/provider/impl/DemoServiceImpl.java

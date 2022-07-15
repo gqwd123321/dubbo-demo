@@ -21,13 +21,13 @@
     <dependencies>
         <dependency>
             <groupId>org.springframework</groupId>
-            <artifactId>spring-jcl</artifactId>
+            <artifactId>spring-context</artifactId>
             <version>5.2.8.RELEASE</version>
         </dependency>
         <dependency>
             <groupId>org.apache.curator</groupId>
             <artifactId>curator-recipes</artifactId>
-            <version>4.0.1</version>
+            <version>4.2.0</version>
         </dependency>
     </dependencies>
 </project>
