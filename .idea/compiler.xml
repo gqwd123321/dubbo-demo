@@ -7,8 +7,8 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="dubbo-provider" />
-        <module name="dubbo-consumer" />
         <module name="dubbo-api" />
+        <module name="dubbo-consumer" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -16,6 +16,8 @@
       <module name="dubbo-consumer" target="1.8" />
       <module name="dubbo-demo" target="8" />
       <module name="dubbo-provider" target="1.8" />
+      <module name="wrapper (1)" target="1.5" />
+      <module name="wrapper (2)" target="1.5" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
