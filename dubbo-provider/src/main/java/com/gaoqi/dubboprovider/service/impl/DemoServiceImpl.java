@@ -5,7 +5,7 @@ import org.apache.dubbo.config.annotation.DubboService;
 import org.springframework.stereotype.Component;
 
 @DubboService
-@Component
+
 public class DemoServiceImpl implements DemoService {
 
     @Override
