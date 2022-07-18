@@ -4,10 +4,13 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.gaoqi.dubboprovider.mapper.UserMapper">
     <resultMap id="UserMap" type="User">
-        <result column="user_id" property="userId"/>
-        <result column="user_name" property="userName"/>
+        <result column="user_id" property="id"/>
+        <result column="user_username" property="username"/>
     </resultMap>
     <select id="queryUserById" resultMap="UserMap" parameterType="Integer">
-        select user_id,user_name from users where user_id = #{userId}
+        select user_id,user_username from users where user_id = #{id}
+    </select>
+    <select id="queryUserByUsername" parameterType="String" resultMap="UserMap">
+        select user_id,user_username from users where user_username =#{username}
     </select>
 </mapper>

@@ -7,6 +7,8 @@ import org.apache.dubbo.config.annotation.DubboService;
 import org.springframework.beans.factory.annotation.Autowired;
 import com.alibaba.fastjson.JSON;
 
+import java.util.List;
+
 @DubboService
 public class UserServiceImpl implements UserService {
     @Autowired
@@ -15,12 +17,23 @@ public class UserServiceImpl implements UserService {
     @Override
     public String queryUserById(Integer userId) {
         User user = userMapper.queryUserById(userId);
-        if(user!=null){
+        if(null!=user){
             String userJson = JSON.toJSONString(user);
             return userJson;
         }
-        System.out.println("该用户不存在");
+        System.out.println("查询不到相关用户");
         return "该用户不存在";
 
+    }
+
+    @Override
+    public String querryUserByUsername(String username) {
+        List<User> users = userMapper.queryUserByUsername(username);
+        if(0!=users.size()){
+            String usersJson = JSON.toJSONString(users);
+            return usersJson;
+        }
+        System.out.println("查询不到相关用户");
+        return "该用户不存在";
     }
 }

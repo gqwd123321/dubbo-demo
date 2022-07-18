@@ -18,7 +18,10 @@ class DubboConsumerApplicationTests {
 
     @Test
     void  contextLoads() {
+        System.out.println(userService.querryUserByUsername("gaoqi"));
+        System.out.println(userService.querryUserByUsername("gaogao"));
         System.out.println(userService.queryUserById(2019140701));
+        System.out.println(userService.queryUserById(2019140706));
     }
 
 }

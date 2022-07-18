@@ -6,8 +6,10 @@ import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
 
+
 @Repository
 @Mapper
 public interface UserMapper {
-    User queryUserById(Integer userId);
+    User queryUserById(Integer id);
+    List<User> queryUserByUsername(String username);
 }
