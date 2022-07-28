@@ -11,5 +11,5 @@ import java.util.List;
 @Mapper
 public interface UserMapper {
     User queryUserById(Integer id);
-    List<User> queryUserByUsername(String username);
+    User queryUserByUsername(String username);
 }

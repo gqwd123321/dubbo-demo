@@ -3,14 +3,21 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.gaoqi.dubboprovider.mapper.UserMapper">
+
     <resultMap id="UserMap" type="User">
         <result column="user_id" property="id"/>
         <result column="user_username" property="username"/>
     </resultMap>
+
     <select id="queryUserById" resultMap="UserMap" parameterType="Integer">
-        select user_id,user_username from users where user_id = #{id}
+        select user_id,user_username
+        from users
+        where user_id = #{id}
     </select>
+
     <select id="queryUserByUsername" parameterType="String" resultMap="UserMap">
-        select user_id,user_username from users where user_username =#{username}
+        select user_id,user_username
+        from users
+        where user_username =#{username}
     </select>
 </mapper>

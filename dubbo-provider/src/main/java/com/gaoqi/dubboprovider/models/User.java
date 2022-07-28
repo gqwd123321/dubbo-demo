@@ -2,8 +2,10 @@ package com.gaoqi.dubboprovider.models;
 
 import lombok.Data;
 
+import java.io.Serializable;
+
 @Data
-public class User {
+public class User implements Serializable {
     private Integer id;
     private String username;
 }

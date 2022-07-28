@@ -1,0 +1,27 @@
+#spring:
+#  redis:
+#    password: Gqwd123321*
+#    sentinel:
+#      master: mymaster
+#      password: Gqwd123321*
+#      nodes: 116.62.206.35:26379,116.62.206.35:26380,116.62.206.35:26381
+#spring:
+#  redis:
+#    cluster:
+#      nodes:
+#        - 116.62.206.35:7000
+#        - 116.62.206.35:7001
+#        - 116.62.206.35:7002
+#        - 116.62.206.35:7003
+#        - 116.62.206.35:7004
+#        - 116.62.206.35:7005
+#    password: Gqwd123321*
+#    timeout: 10000
+#logging:
+#  pattern:
+#    console: '%date{yyyy-MM-dd HH:mm:ss.SSS} | %highlight(%5level) [%green(%16.16thread)] %clr(%-50.50logger{49}){cyan} %4line -| %highlight(%msg%n)'
+#  level:
+#    root: info
+#    io.lettuce.core: debug
+#    org.springframework.data.redis: debug
+

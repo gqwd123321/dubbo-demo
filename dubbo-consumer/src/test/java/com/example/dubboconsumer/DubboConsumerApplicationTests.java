@@ -18,10 +18,9 @@ class DubboConsumerApplicationTests {
 
     @Test
     void  contextLoads() {
-        System.out.println(userService.querryUserByUsername("gaoqi"));
-        System.out.println(userService.querryUserByUsername("gaogao"));
-        System.out.println(userService.queryUserById(2019140701));
-        System.out.println(userService.queryUserById(2019140706));
+        System.out.println("缓存中存在的测试结果："+userService.queryUserByUsername("wangyue"));
+        System.out.println("缓存中不存在数据库中存在的测试结果："+userService.queryUserByUsername("gaoqi"));
+        System.out.println("缓存中不存在，数据库中也不存在的测试结果："+userService.queryUserByUsername("gaogao"));
     }
 
 }
