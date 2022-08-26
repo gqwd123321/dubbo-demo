@@ -24,4 +24,4 @@
 #    root: info
 #    io.lettuce.core: debug
 #    org.springframework.data.redis: debug
-
+#配置sentinel

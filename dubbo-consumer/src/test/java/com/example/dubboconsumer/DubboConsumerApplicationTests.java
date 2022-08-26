@@ -14,13 +14,14 @@ class DubboConsumerApplicationTests {
 
 
     @DubboReference
-    UserService userService;
+    TestService testService;
 
     @Test
     void  contextLoads() {
-        System.out.println("缓存中存在的测试结果："+userService.queryUserByUsername("wangyue"));
-        System.out.println("缓存中不存在数据库中存在的测试结果："+userService.queryUserByUsername("gaoqi"));
-        System.out.println("缓存中不存在，数据库中也不存在的测试结果："+userService.queryUserByUsername("gaogao"));
+//        System.out.println("缓存中存在的测试结果："+userService.queryUserByUsername("wangyue"));
+//        System.out.println("缓存中不存在数据库中存在的测试结果："+userService.queryUserByUsername("gaoqi"));
+//        System.out.println("缓存中不存在，数据库中也不存在的测试结果："+userService.queryUserByUsername("gaogao"));
+        testService.testTask();;
     }
 
 }

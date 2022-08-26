@@ -2,7 +2,6 @@ package com.gaoqi.dubboprovider.RedisStudy;
 
 
 import com.alibaba.fastjson.JSONObject;
-import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Component;
@@ -12,12 +11,10 @@ import java.util.List;
 import java.util.Set;
 
 @Component
-@AllArgsConstructor
 public class RedisDelayQueue {
 
     @Autowired
     private RedisTemplate redisTemplate;
-
     public static final String queueKey = "queueTest";
 
 
@@ -37,10 +34,10 @@ public class RedisDelayQueue {
         }
         return tag>0?true:false;
     }
-
     //获取zset中的任务
     public List<RedisTaskItem> pull(){
-        Set<String> strings = redisTemplate.opsForZSet().rangeByScore(queueKey,0,System.currentTimeMillis());
+        //性能如何？可以用，效率取决于count的大小，控制好count的大小即可。
+        Set<String> strings = redisTemplate.opsForZSet().rangeByScore(queueKey,0,System.currentTimeMillis(),0,10);
         if(strings==null){
             return null;
         }
@@ -50,6 +47,4 @@ public class RedisDelayQueue {
         }
         return list;
     }
-
-
 }

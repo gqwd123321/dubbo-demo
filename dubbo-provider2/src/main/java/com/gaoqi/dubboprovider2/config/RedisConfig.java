@@ -5,6 +5,8 @@ import com.alibaba.fastjson.support.spring.GenericFastJsonRedisSerializer;
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.PropertyAccessor;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.redisson.Redisson;
+import org.redisson.config.Config;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
@@ -45,5 +47,17 @@ public class RedisConfig {
         template.afterPropertiesSet();
 
         return template;
+    }
+
+    //配置redisson
+    @Bean
+    public Redisson redisson(){
+        Config config = new Config();
+        config.useSingleServer()
+                .setConnectionPoolSize(64)
+                .setConnectTimeout(10000)
+                .setTimeout(3000)
+                .setAddress("redis://127.0.0.1:6379");
+        return (Redisson) Redisson.create(config);
     }
 }

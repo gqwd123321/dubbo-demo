@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gaoqi.dubboprovider2.mapper.SuccessQpsMapper">
+
+    <resultMap id="SuccessQpsMap" type="SuccessQps">
+        <result property="uid" column="uid"/>
+        <result property="currentNum" column="current_num"></result>
+        <result property="currentTime" column="current_time"></result>
+    </resultMap>
+
+    <select id="allData" resultMap="SuccessQpsMap">
+        select * from success_qps;
+    </select>
+
+<!--    <insert id="insertData" parameterType="SuccessQps">-->
+<!--        insert into success_qps values (#{currentNum},#{currentTime})-->
+<!--    </insert>-->
+    <insert id="insertData" parameterType="SuccessQps">
+        insert into success_qps ( `uid` ,`current_num`, `current_time` ) values (#{uid},#{currentNum}, #{currentTime} )
+    </insert>
+    <update id="updateData" parameterType="SuccessQps">
+        update success_qps set `current_num` = #{currentNum},`current_time`=#{currentTime}
+    </update>
+    <select id="querryData" parameterType="Integer" resultMap="SuccessQpsMap">
+        select * from success_qps where `uid` = #{id}
+    </select>
+
+</mapper>
